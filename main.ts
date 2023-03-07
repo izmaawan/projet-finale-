@@ -28,3 +28,16 @@ time = ""
 let adjust = 0
 hours = 0
 Minutes = 0
+basic.forever(function () {
+    basic.pause(60000)
+    if (Minutes < 59) {
+        Minutes += 1
+    } else {
+        Minutes = 0
+        if (hours < 23) {
+            hours += 1
+        } else {
+            hours = 0
+        }
+    }
+})
